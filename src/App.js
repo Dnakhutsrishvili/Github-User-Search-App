@@ -1,23 +1,32 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from "react";
+import "./App.css";
+import Header from "./Components/Header";
+import SearchBar from "./Components/SearchBar";
+import RenderInfo from "./Components/RenderInfo";
+
+export const ThemeContext = React.createContext("cet");
 
 function App() {
+  const [mode, setMode] = useState(true);
+  const [search, setSearch] = useState("octocat");
+  const [error, setError] = useState(false);
+
+  mode
+    ? (document.body.style.backgroundColor = "#F6F8FF")
+    : (document.body.style.backgroundColor = "#141D2F");
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="font-face-gm">
+      <ThemeContext.Provider value={error}>
+        <Header mode={mode} setMode={setMode}></Header>
+        <SearchBar mode={mode} setSearch={setSearch}></SearchBar>
+
+        <RenderInfo
+          setError={setError}
+          mode={mode}
+          search={search}
+        ></RenderInfo>
+      </ThemeContext.Provider>
     </div>
   );
 }

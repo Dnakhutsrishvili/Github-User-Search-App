@@ -1,0 +1,140 @@
+.searchBar {
+  height: 6rem;
+  width: 28.2rem;
+
+  border-radius: 1.5rem;
+  border: none;
+  background: #fefefe;
+  box-shadow: 0px 16px 30px -10px rgba(70, 96, 187, 0.198567);
+  border-radius: 1.5rem;
+  padding-left: 4.5rem;
+  outline: none;
+
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1.3rem;
+  line-height: 2.5rem;
+  /* identical to box height, or 192% */
+
+  color: #4b6a9b;
+}
+.searchBarDark {
+  height: 6rem;
+  width: 28.2rem;
+
+  border-radius: 1.5rem;
+  border: none;
+  background: #1e2a47;
+  box-shadow: 0px 16px 30px -10px rgba(70, 96, 187, 0.198567);
+  border-radius: 1.5rem;
+  padding-left: 4.5rem;
+  outline: none;
+
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1.3rem;
+  line-height: 2.5rem;
+  /* identical to box height, or 192% */
+
+  color: #ffffff;
+}
+.searchBar::placeholder {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1.3rem;
+  line-height: 2.5rem;
+  /* identical to box height, or 192% */
+
+  color: #4b6a9b;
+}
+.searchBarDark::placeholder {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1.3rem;
+  line-height: 2.5rem;
+  /* identical to box height, or 192% */
+
+  color: #ffffff;
+}
+.btn {
+  background: #0079ff;
+  border-radius: 1rem;
+  height: 4.6rem;
+  width: 8.4rem;
+
+  font-family: "Space Mono";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 1.4rem;
+  line-height: 2.1rem;
+  /* identical to box height */
+  border: none;
+  text-align: center;
+  cursor: pointer;
+  outline: none;
+  padding: 0;
+
+  color: #ffffff;
+  position: absolute;
+  margin-left: 16em;
+}
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  margin-top: 1rem;
+}
+.searchIcon {
+  position: absolute;
+  height: 1.763rem;
+  width: 1.763rem;
+  margin-left: -14em;
+  border-radius: 0px;
+}
+.error {
+  position: absolute;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 15px;
+  line-height: 22px;
+
+  color: #f74646;
+}
+@media only screen and (min-width: 600px) {
+  .searchBar {
+    height: 69px;
+    width: 573px;
+  }
+  .searchBarDark {
+    height: 69px;
+    width: 569.5px;
+  }
+  .btn {
+    margin-left: 42rem;
+  }
+  .searchIcon {
+    margin-left: -23.5em;
+  }
+  .error {
+    margin-left: 23.5rem;
+  }
+}
+
+@media only screen and (min-width: 970px) {
+  .searchBar {
+    width: 730px;
+  }
+  .searchBarDark {
+    width: 730px;
+  }
+  .btn {
+    margin-left: 55rem;
+  }
+  .searchIcon {
+    margin-left: -30.5em;
+  }
+  .error {
+    margin-left: 36.5rem;
+  }
+}
